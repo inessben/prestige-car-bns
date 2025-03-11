@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fffcf5;
+}
+
+header {
+    color: #333;
+    background: #fffcf5;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+header .logo {
+    width: 200px;
+    padding: 1em;
+}
+
+header nav a:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+#home {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+#car-visualizer {
+    width: 100%;
+    height: 500px;
+    background: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form button {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: gold;
+}
+
+#services {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#service {
+    display: inline-block;
+    justify-content: space-between;
+    height: 400px;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+
+#contact {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+}
+
+.icon {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    color: #fff;
+    width: 20px;
+    font-size: 3em;
+    font-weight: 600;
+    margin-left: 3em;
+    text-decoration: none;
+}
+
+#contact a,
+.icon a {
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+}
+
+
+#contact a:focus,
+#contact a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
