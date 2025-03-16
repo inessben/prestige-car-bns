@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <meta name="description"
+        content="Prestige Car BNS - Service de transport de luxe avec chauffeur privé. Voyagez en toute sérénité avec nos véhicules haut de gamme.">
+    <meta name="keywords"
+        content="transport de luxe, chauffeur privé, Mercedes, VTC, transfert aéroport, voiture haut de gamme">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-    <title>Prestige Car BNS</title>
+    <title>Prestige Car BNS - Transport de Luxe</title>
     <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
     <header>
-        <img src="assets/images/logo.png" class="logo" alt="car voitures mercedes uber voyage">
         <nav>
             <a href="#services">Services</a>
             <a href="#reservation">Réservation</a>
@@ -26,63 +28,74 @@
 
     <main>
         <section id="home" class="home">
-            <h1>Bienvenue chez Prestige Car BNS</h1>
-            <p>Voyagez en toute sérénité avec notre service de transport haut de gamme.</p>
-            <div id="car-visualizer"></div>
+            <h1>Voyagez avec Élégance et Confort</h1>
+            <p>Prestige Car BNS vous offre un service de transport avec chauffeur privé. Profitez de nos
+                véhicules haut de gamme pour vos déplacements.</p>
         </section>
 
         <section id="services">
             <h2>Nos Services</h2>
-            <p>Transferts aéroports, événements professionnels et privés, mise à disposition avec chauffeur.</p>
-            <div id="service"></div>
-            <div id="service"></div>
-            <div id="service"></div>
-            <div id="service"></div>
-            <div id="service"></div>
-            <div id="service"></div>
-
+            <div class="services-container">
+                <div class="service-box service-1">
+                    <p>Transferts aéroports & gares</p>
+                </div>
+                <div class="service-box service-2">
+                    <p>Événements professionnels</p>
+                </div>
+                <div class="service-box service-3">
+                    <p>Mariages & Soirées privées</p>
+                </div>
+                <div class="service-box service-4">
+                    <p>Visites touristiques & Excursions</p>
+                </div>
+                <div class="service-box service-5">
+                    <p>Transport VIP & Personnalités</p>
+                </div>
+            </div>
         </section>
 
         <section id="reservation" class="reservation">
-            <h2>Réservez dès maintenant</h2>
+            <h2>Réservez Votre Chauffeur Privé</h2>
+            <p>Planifiez votre trajet en quelques clics et profitez d'un service personnalisé.</p>
             <form id="reservation-form">
-                <input type="text" name="fullname" placeholder="Nom complet *" required>
+                <input type="text" name="surname" placeholder="Nom *" required>
+                <input type="text" name="name" placeholder="Prénom *" required>
                 <input type="email" name="email" placeholder="Email *" required>
+                <input type="text" name="number" placeholder="Numéro de téléphone *" required>
                 <input type="text" name="departure_address" placeholder="Adresse de départ *" required>
                 <input type="text" name="destination_address" placeholder="Adresse de destination *" required>
-                <button type="submit">Réserver</button>
+                <input type="text" name="details" placeholder="Autre chose à ajouter">
+                <button type="submit">Réserver Maintenant</button>
             </form>
         </section>
 
-
         <section id="contact" class="contact">
             <h2>Contactez-nous</h2>
-            <a href="mailto:mi.ri@live.fr">
-                <img src="assets/icons/mail.svg" alt="mail" class="icon"> : mi.ri@live.fr
+            <p>Pour toute demande ou réservation spécifique, contactez-nous directement :</p>
+            <a href="mailto:contact@prestigecarbns.com">
+                <!-- <img src="assets/icons/mail.svg" alt="Email"> contact@prestigecarbns.com -->
             </a>
             <a href="tel:+33767076156">
-                <img src="assets/icons/number.svg" alt="number" class="icon"> : +33 7 67 07 61 56
+                <img src="assets/icons/number.svg" alt="Téléphone"> 07 67 07 61 56
             </a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Prestige Car BNS. Tous droits réservés.</p>
+        <p>&copy; 2025 Prestige Car BNS - Tous droits réservés. </p>
+        <p><a href="#">Mentions légales</a></p>
+        <p><a href="#">Politique de confidentialité</a></p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="/script.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        // Initialiser EmailJS avec votre User ID
+    <script>
         (function () {
-            emailjs.init("6z4k8osJ7ICb5XBmH"); // Remplacez par votre User ID EmailJS
+            emailjs.init("6z4k8osJ7ICb5XBmH");
         })();
 
-        // Écouter la soumission du formulaire
         document.getElementById("reservation-form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Empêcher le rechargement de la page
-
-            // Envoyer les données via EmailJS
+            event.preventDefault();
             emailjs.sendForm("service_8l8yw94", "template_9shl8al", this)
                 .then(function (response) {
                     alert("Réservation effectuée avec succès !");
@@ -91,7 +104,6 @@
                 });
         });
     </script>
-
 </body>
 
 </html>
