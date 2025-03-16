@@ -9,21 +9,23 @@ Prestige Car Bns est une plateforme de réservation de voitures de luxe avec cha
 - **Expérience utilisateur immersive** : Un design épuré et une navigation fluide.
 
 ## Versions du Formulaire
-### **V1 & V2(actuelle)**
+### **V1 & V2 (Actuelle)**
 - Intégration avec l'API **EmailJS** pour l'envoi des réservations par email.
 
-### **V2.1 (en cours)**
+### **V2.1 (En cours)**
 - Passage à une intégration **WhatsApp Business API** via **Twilio**.
 - Tous les chauffeurs devront posséder un compte **WhatsApp Business** pour recevoir les informations des courses directement sur WhatsApp.
 
 ## Technologies utilisées
-- **Front-end** : HTML, CSS, JS.
+- **Front-end** : HTML, CSS (avec animations et loaders optimisés).
 - **Back-end** : API Twilio pour la gestion des messages WhatsApp Business.
 - **Intégration API** : Migration de EmailJS vers Twilio pour une communication améliorée.
 
 ## Roadmap
+- **Ajout d'un back-office pour la gestion des réservations.**
 - **Optimisation des performances et SEO.**
 - **Support multi-langue (FR, EN, ES).**
 
 ## Contact
-Pour toute question ou suggestion, veuillez contacter l'équipe via mail : ine.benss@gmailcom
+Pour toute question ou suggestion, veuillez contacter l'équipe via email: ine.benss@gmail.com
+
