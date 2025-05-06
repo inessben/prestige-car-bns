@@ -62,13 +62,27 @@
                 <input type="text" name="surname" placeholder="Nom *" required>
                 <input type="text" name="name" placeholder="Prénom *" required>
                 <input type="email" name="email" placeholder="Email *" required>
-                <input type="text" name="number" placeholder="Numéro de téléphone *" required>
-                <input type="text" name="departure_address" placeholder="Adresse de départ *" required>
-                <input type="text" name="destination_address" placeholder="Adresse de destination *" required>
+                <input type="tel" name="number" placeholder="Numéro de téléphone *" required>
+
+                <h3>🚗 Adresse de départ</h3>
+                <input type="text" name="departure_street" placeholder="Rue *" required>
+                <input type="text" name="departure_city" placeholder="Ville *" required>
+                <input type="text" name="departure_zip" placeholder="Code Postal *" required>
+
+                <h3>📍 Adresse de destination</h3>
+                <input type="text" name="destination_street" placeholder="Rue *" required>
+                <input type="text" name="destination_city" placeholder="Ville *" required>
+                <input type="text" name="destination_zip" placeholder="Code Postal *" required>
+
+                <label for="datetime">🕐 Date et heure de réservation </label>
+                <input type="datetime-local" name="datetime" id="datetime" class="time" required>
+
                 <input type="text" name="details" placeholder="Autre chose à ajouter">
+
                 <button type="submit">Réserver Maintenant</button>
             </form>
         </section>
+
 
         <section id="contact" class="contact">
             <h2>Contactez-nous</h2>

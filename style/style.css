@@ -62,7 +62,19 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
 }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 #home::before {
     content: "";
@@ -198,6 +210,7 @@ header nav a:hover {
 }
 
 /* Réservation */
+/* Réservation */
 #reservation {
     background: #222;
     color: white;
@@ -210,6 +223,13 @@ header nav a:hover {
     margin-bottom: 1rem;
 }
 
+#reservation h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    color: #000;
+    text-align: left;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -220,6 +240,7 @@ form {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
 }
 
 form input,
@@ -228,6 +249,28 @@ form button {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.time {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    color: #888888;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form label {
+    font-weight: bold;
+    text-align: left;
 }
 
 form button {
