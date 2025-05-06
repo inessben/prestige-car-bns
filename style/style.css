@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&display=swap');
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: #333;
     background: #fffcf5;
     line-height: 1.6;
@@ -23,7 +25,17 @@ header nav {
     margin-left: auto;
 }
 
+.logo {
+    margin-left: auto;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: none;
+
+}
+
 header nav a {
+    margin-left: auto;
     color: #fff;
     text-decoration: none;
     margin: 0 1rem;
@@ -235,8 +247,9 @@ form button:hover {
 }
 
 #contact a {
-    display: flex;
+    display: inline-block;
     align-items: center;
+    padding-left: 18px;
     color: #222;
     font-weight: 500;
     text-decoration: none;
@@ -304,5 +317,54 @@ footer a:hover {
 @media (max-width: 400px) {
     footer {
         font-size: 0.4em;
+    }
+}
+
+.footer-links {
+    max-width: 800px;
+    line-height: 1.6;
+    font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 70px auto;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.footer-links h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.footer-links p {
+    margin: 10px 0;
+    font-size: 1rem;
+    overflow: hidden;
+    color: #555;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-links {
+        padding: 30px 20px;
+    }
+
+    .footer-links h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-links h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-links p {
+        font-size: 0.95rem;
     }
 }
