@@ -355,7 +355,7 @@ footer a:hover {
     color: #555;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
     header nav {
         font-size: 0;
     }
