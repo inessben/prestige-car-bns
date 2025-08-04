@@ -232,7 +232,7 @@ function Reservation() {
               <h2>Votre Véhicule</h2>
               <div className="selected-vehicle">
                 <div className="vehicle-image-preview">
-                  <img src="/assets/images/vehicule-1.jpg" alt="Mercedes Classe C" />
+                  <img src="/images/vehicule-1.jpg" alt="Mercedes Classe C" />
                 </div>
                 <div className="vehicle-details">
                   <h3>Mercedes Classe C</h3>

@@ -12,7 +12,7 @@ function Header() {
     <header>
       <Link to="/" className="logo-link">
         <h1 className="logo">
-          <img src="/assets/images/logo.png" alt="Prestige Car BNS Logo" />
+          <img src="/images/logo.png" alt="Prestige Car BNS Logo" />
           Prestige Car BNS
         </h1>
       </Link>

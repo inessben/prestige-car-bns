@@ -15,7 +15,7 @@ function Services() {
         <div className="container">
           <div className="service-detail">
             <div className="service-image">
-              <img src="/assets/images/service-1.jpg" alt="Transferts Aéroports & Gares" loading="lazy" />
+              <img src="/images/service-1.jpg" alt="Transferts Aéroports & Gares" loading="lazy" />
             </div>
             <div className="service-info">
               <h2>🛫 Transferts Aéroports & Gares</h2>
@@ -40,7 +40,7 @@ function Services() {
 
           <div className="service-detail reverse">
             <div className="service-image">
-              <img src="/assets/images/service-2.jpg" alt="Événements Professionnels" loading="lazy" />
+              <img src="/images/service-2.jpg" alt="Événements Professionnels" loading="lazy" />
             </div>
             <div className="service-info">
               <h2>🏢 Événements Professionnels</h2>
@@ -65,7 +65,7 @@ function Services() {
 
           <div className="service-detail">
             <div className="service-image">
-              <img src="/assets/images/service-3.jpg" alt="Mariages & Soirées Privées" loading="lazy" />
+              <img src="/images/service-3.jpg" alt="Mariages & Soirées Privées" loading="lazy" />
             </div>
             <div className="service-info">
               <h2>💒 Mariages & Soirées Privées</h2>
@@ -90,7 +90,7 @@ function Services() {
 
           <div className="service-detail reverse">
             <div className="service-image">
-              <img src="/assets/images/service-4.jpg" alt="Visites Touristiques & Excursions" loading="lazy" />
+              <img src="/images/service-4.jpg" alt="Visites Touristiques & Excursions" loading="lazy" />
             </div>
             <div className="service-info">
               <h2>🏛️ Visites Touristiques & Excursions</h2>
@@ -115,7 +115,7 @@ function Services() {
 
           <div className="service-detail">
             <div className="service-image">
-              <img src="/assets/images/service-5.jpg" alt="Transport VIP & Personnalités" loading="lazy" />
+              <img src="/images/service-5.jpg" alt="Transport VIP & Personnalités" loading="lazy" />
             </div>
             <div className="service-info">
               <h2>⭐ Transport VIP & Personnalités</h2>

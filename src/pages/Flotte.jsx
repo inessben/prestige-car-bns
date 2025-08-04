@@ -26,7 +26,7 @@ function Flotte() {
           <div className="vehicle-grid">
             <div className="vehicle-card">
               <div className="vehicle-image">
-                <img src="/assets/images/vehicule-1.jpg" alt="Mercedes Classe C" />
+                <img src="/images/vehicule-1.jpg" alt="Mercedes Classe C" />
               </div>
               <div className="vehicle-info">
                 <h3>Mercedes Classe C</h3>
@@ -61,7 +61,7 @@ function Flotte() {
 
             <div className="vehicle-card unavailable">
               <div className="vehicle-image">
-                <img src="/assets/images/vehicule-2.jpg" alt="BMW Série 7" />
+                <img src="/images/vehicule-2.jpg" alt="BMW Série 7" />
                 <div className="unavailable-overlay">
                   <span>Indisponible</span>
                 </div>
@@ -99,7 +99,7 @@ function Flotte() {
 
             <div className="vehicle-card unavailable">
               <div className="vehicle-image">
-                <img src="/assets/images/vehicule-3.jpg" alt="Audi A8" />
+                <img src="/images/vehicule-3.jpg" alt="Audi A8" />
                 <div className="unavailable-overlay">
                   <span>Indisponible</span>
                 </div>
