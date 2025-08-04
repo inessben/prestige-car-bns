@@ -92,7 +92,7 @@ function Reservation() {
         <div className="container">
           <h2>Réservation Simple et Rapide</h2>
           <p>
-            Planifiez votre trajet avec notre Mercedes Classe C disponible. Remplissez le formulaire ci-dessous
+            Planifiez votre trajet avec notre Mercedes CLA disponible. Remplissez le formulaire ci-dessous
             et nous vous confirmerons votre réservation dans les plus brefs délais.
           </p>
         </div>
@@ -183,7 +183,7 @@ function Reservation() {
                       onChange={handleChange}
                     >
                       <option value="">Sélectionner un véhicule</option>
-                      <option value="mercedes-c">Mercedes Classe C - Disponible</option>
+                      <option value="mercedes-cla">Mercedes CLA - Disponible</option>
                       <option value="bmw-7" disabled>BMW Série 7 - Indisponible</option>
                       <option value="audi-a8" disabled>Audi A8 - Indisponible</option>
                       <option value="mercedes-v" disabled>Mercedes Classe V - Indisponible</option>
@@ -232,10 +232,10 @@ function Reservation() {
               <h2>Votre Véhicule</h2>
               <div className="selected-vehicle">
                 <div className="vehicle-image-preview">
-                  <img src="/images/vehicule-1.jpg" alt="Mercedes Classe C" />
+                  <img src="/images/vehicule-1.jpg" alt="Mercedes CLA" />
                 </div>
                 <div className="vehicle-details">
-                  <h3>Mercedes Classe C</h3>
+                  <h3>Mercedes CLA</h3>
                   <p className="vehicle-subtitle">Élégance et confort allemand</p>
                   <div className="vehicle-features-list">
                     <div className="feature-item">

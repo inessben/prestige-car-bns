@@ -12,7 +12,6 @@ function Header() {
     <header>
       <Link to="/" className="logo-link">
         <h1 className="logo">
-          <img src="/images/logo.png" alt="Prestige Car BNS Logo" />
           Prestige Car BNS
         </h1>
       </Link>
@@ -22,6 +21,7 @@ function Header() {
         <span></span>
       </div>
       <nav id="nav-menu" className={isMenuOpen ? 'active' : ''}>
+        <Link to="/" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
         <Link to="/services" onClick={() => setIsMenuOpen(false)}>Nos Services</Link>
         <Link to="/flotte" onClick={() => setIsMenuOpen(false)}>Nos Véhicules</Link>
         <Link to="/reservation" onClick={() => setIsMenuOpen(false)}>Réservation</Link>

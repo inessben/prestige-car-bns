@@ -26,10 +26,10 @@ function Flotte() {
           <div className="vehicle-grid">
             <div className="vehicle-card">
               <div className="vehicle-image">
-                <img src="/images/vehicule-1.jpg" alt="Mercedes Classe C" />
+                <img src="/images/vehicule-1.jpg" alt="Mercedes CLA" />
               </div>
               <div className="vehicle-info">
-                <h3>Mercedes Classe C</h3>
+                <h3>Mercedes CLA</h3>
                 <p className="vehicle-subtitle">Élégance et confort allemand</p>
                 <div className="vehicle-specs">
                   <div className="spec">
@@ -52,7 +52,7 @@ function Flotte() {
                   <span className="feature">✓ Sellerie cuir</span>
                 </div>
                 <p className="vehicle-description">
-                  Véhicule emblématique de notre flotte, la Mercedes Classe C offre un confort optimal
+                  Véhicule emblématique de notre flotte, la Mercedes CLA offre un confort optimal
                   avec ses sièges en cuir chauffants, son système de divertissement de qualité
                   et son isolation phonique soignée.
                 </p>

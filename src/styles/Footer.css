@@ -1,5 +1,5 @@
 footer {
-  background: linear-gradient(135deg, #000 0%, var(--primary-black) 100%);
+  background: var(--primary-black);
   color: var(--white);
   margin-top: auto;
   overflow: hidden;
@@ -40,6 +40,8 @@ footer::before {
   font-family: var(--font-secondary);
   font-size: 1.8rem;
   font-weight: 700;
+  text-transform: uppercase;
+
   color: var(--white);
   text-decoration: none;
 }
@@ -170,10 +172,10 @@ footer::before {
 .footer-bottom {
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* text-transform: uppercase; */
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
   padding: 2rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
 }
 
 .footer-bottom-content {
@@ -214,7 +216,7 @@ footer::before {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
- 
+
   footer {
     padding: 2rem 0;
   }

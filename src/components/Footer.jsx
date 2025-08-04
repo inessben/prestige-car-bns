@@ -7,7 +7,6 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-main">
           <div className="footer-logo">
-            {/* <img src="/assets/images/logo.png" alt="Prestige Car BNS Logo" /> */}
             Prestige Car BNS
           </div>
           <p className="footer-description">
