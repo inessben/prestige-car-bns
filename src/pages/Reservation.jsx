@@ -19,7 +19,13 @@ function Reservation() {
 
   // Initialiser EmailJS
   useEffect(() => {
-    emailjs.init("6z4k8osJ7ICb5XBmH"); // Votre clé publique EmailJS
+    console.log('🔧 Initialisation EmailJS...');
+    try {
+      emailjs.init("6z4k8osJ7ICb5XBmH"); // Votre clé publique EmailJS
+      console.log('✅ EmailJS initialisé avec succès');
+    } catch (error) {
+      console.error('❌ Erreur lors de l\'initialisation EmailJS:', error);
+    }
   }, []);
 
   const handleChange = (e) => {
@@ -31,31 +37,46 @@ function Reservation() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('🚀 Début de soumission du formulaire');
+    console.log('📋 Données du formulaire:', formData);
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
-      // Préparation des données pour EmailJS
+      // Vérification que tous les champs requis sont remplis
+      if (!formData.surname || !formData.name || !formData.email || !formData.phone ||
+        !formData.pickup_address || !formData.destination_address || !formData.datetime || !formData.vehicle) {
+        throw new Error('Tous les champs obligatoires doivent être remplis');
+      }
+
+      // Préparation des données pour EmailJS - CORRESPONDANT AU TEMPLATE
       const templateParams = {
-        from_name: `${formData.name} ${formData.surname}`,
-        from_email: formData.email,
-        phone: formData.phone,
-        pickup_address: formData.pickup_address,
+        name: formData.name,
+        surname: formData.surname,
+        number: formData.phone,
+        departure_address: formData.pickup_address,
         destination_address: formData.destination_address,
         datetime: formData.datetime,
         vehicle: formData.vehicle,
-        details: formData.details || 'Aucun détail supplémentaire',
-        to_name: 'Prestige Car BNS'
+        details: formData.details || 'Aucun détail supplémentaire'
       };
 
-      // Envoi de l'email via EmailJS
+      console.log('📧 Paramètres du template (corrigés):', templateParams);
+      console.log('🔑 Configuration EmailJS:', {
+        serviceId: 'service_8l8yw94',
+        templateId: 'template_9shl8al'
+      });
+
+      console.log('📤 Envoi en cours avec paramètres corrigés...');
+
       const result = await emailjs.send(
-        'service_q6kk4mp', // Votre Service ID
-        'template_reservation', // Votre Template ID pour les réservations
+        'service_8l8yw94',
+        'template_9shl8al',
         templateParams
       );
 
-      console.log('Email envoyé avec succès:', result);
+      console.log('✅ Email envoyé avec succès:', result);
       setSubmitStatus('success');
 
       // Réinitialiser le formulaire
@@ -72,10 +93,17 @@ function Reservation() {
       });
 
     } catch (error) {
-      console.error('Erreur lors de l\'envoi:', error);
+      console.error('❌ Erreur lors de l\'envoi:', error);
+      console.error('📄 Détails de l\'erreur:', {
+        name: error.name,
+        message: error.message,
+        status: error.status,
+        text: error.text
+      });
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
+      console.log('🏁 Fin de soumission du formulaire');
     }
   };
 
@@ -213,7 +241,15 @@ function Reservation() {
 
                 {submitStatus === 'error' && (
                   <div className="error-message" style={{ color: 'red', marginBottom: '1rem', padding: '1rem', backgroundColor: '#f8d7da', border: '1px solid #f5c6cb', borderRadius: '5px' }}>
-                    ✗ Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter directement.
+                    ✗ <strong>Erreur de configuration EmailJS</strong><br />
+                    Le Service ID 'service_q6kk4mp' n'est pas valide.<br />
+                    Pour corriger cela :<br />
+                    1. Allez sur <a href="https://dashboard.emailjs.com/admin" target="_blank" style={{ color: 'blue', textDecoration: 'underline' }}>dashboard.emailjs.com/admin</a><br />
+                    2. Connectez-vous à votre compte<br />
+                    3. Copiez le bon Service ID depuis votre dashboard<br />
+                    4. Remplacez 'service_q6kk4mp' dans le code<br />
+                    <br />
+                    <strong>Ou contactez-nous directement via WhatsApp.</strong>
                   </div>
                 )}
 
