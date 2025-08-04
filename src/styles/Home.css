@@ -1,0 +1,219 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('../assets/images/luxury-car.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--white);
+  padding: 2rem;
+}
+
+.home h1 {
+  font-family: var(--font-secondary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 4px 8px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.home p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.about-content {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.about-section {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  color: var(--primary-black);
+  margin-bottom: 2rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.about-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-gold);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-item {
+  background: var(--light-gray);
+  padding: 2.5rem 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  transition: var(--transition);
+}
+
+.value-item:hover::before {
+  left: 100%;
+}
+
+.value-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--primary-gold);
+  background: var(--white);
+}
+
+.value-item h3 {
+  font-size: 1.3rem;
+  color: var(--primary-black);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.value-item p {
+  color: var(--medium-gray);
+  font-size: 0.95rem;
+}
+
+.commitments-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.commitments-list li {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: var(--dark-gray);
+  transition: var(--transition);
+}
+
+.commitments-list li:hover {
+  color: var(--primary-black);
+  transform: translateX(5px);
+}
+
+.commitments-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-gold);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .home {
+    background-attachment: scroll;
+    padding: 1rem;
+  }
+  
+  .about-content {
+    padding: 3rem 0;
+  }
+  
+  .about-section {
+    margin-bottom: 3rem;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .value-item {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+  }
+  
+  .value-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  .commitments-list li {
+    font-size: 1rem;
+  }
+}
+
+.about-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-section:nth-child(2) { animation-delay: 0.2s; }
+.about-section:nth-child(3) { animation-delay: 0.4s; }
+.about-section:nth-child(4) { animation-delay: 0.6s; }
+
+.value-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.value-item:nth-child(1) { animation-delay: 0.1s; }
+.value-item:nth-child(2) { animation-delay: 0.2s; }
+.value-item:nth-child(3) { animation-delay: 0.3s; }
+.value-item:nth-child(4) { animation-delay: 0.4s; }

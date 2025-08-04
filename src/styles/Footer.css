@@ -1,0 +1,235 @@
+footer {
+  background: linear-gradient(135deg, #000 0%, var(--primary-black) 100%);
+  color: var(--white);
+  margin-top: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 49%, rgba(212, 175, 55, 0.03) 50%, transparent 51%);
+  background-size: 20px 20px;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer-main {
+  padding-right: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-logo img {
+  height: 45px;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.footer-description {
+  color: var(--medium-gray);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.social-link:hover {
+  background: var(--primary-gold);
+  color: var(--primary-black);
+  transform: translateY(-3px);
+  border-color: var(--primary-gold);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.footer-section {
+  margin-bottom: 0;
+}
+
+.footer-section h3 {
+  font-family: var(--font-secondary);
+  color: var(--primary-gold);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--primary-gold);
+  border-radius: 1px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+  color: var(--medium-gray);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.footer-section a:hover {
+  color: var(--primary-gold);
+  transform: translateX(5px);
+}
+
+.footer-section a::before {
+  content: '▸';
+  margin-right: 0.5rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.footer-section a:hover::before {
+  opacity: 1;
+}
+
+.footer-section p {
+  color: var(--medium-gray);
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--medium-gray);
+  font-size: 0.95rem;
+}
+
+.footer-contact-item .icon {
+  margin-right: 0.8rem;
+  color: var(--primary-gold);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  color: var(--medium-gray);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--medium-gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--primary-gold);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+ 
+  footer {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .footer-section a {
+    font-size: 0.9rem;
+  }
+}

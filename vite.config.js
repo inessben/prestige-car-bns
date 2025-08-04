@@ -1,9 +1,14 @@
-// // vite.config.js
-// import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// export default defineConfig({
-//   server: {
-//     port: 3000, // Changez ceci par le port de votre choix
-//     strictPort: true, // Cela forcera Vite à ne pas changer le port si celui-ci est occupé
-//   }
-// });
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    open: true
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
+  }
+})

@@ -1,0 +1,38 @@
+/* =============================================
+   FICHIER CSS PRINCIPAL - PRESTIGE CAR BNS
+   ============================================= */
+
+/* Variables globales et base */
+@import './variables.css';
+
+/* Composants */
+@import './Header.css';
+@import './Footer.css';
+
+/* Pages */
+@import './Home.css';
+@import './Services.css';
+@import './Flotte.css';
+@import './Contact.css';
+@import './Reservation.css';
+
+/* =============================================
+   STYLES UTILITAIRES SUPPLÉMENTAIRES
+   ============================================= */
+
+/* Main content */
+main {
+  flex: 1;
+}
+
+/* Print styles */
+@media print {
+  header, footer {
+    display: none;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Pages principales
+Allow: /index.html
+Allow: /a-propos.html
+Allow: /services.html
+Allow: /flotte.html
+Allow: /contact.html
+Allow: /reservation.html
+
+# Pages légales
+Allow: /mentions-legales.html
+Allow: /politique-confidentialite.html
+
+# Ressources
+Allow: /style/
+Allow: /assets/
+Allow: /script/
+
+# Sitemap
+Sitemap: https://www.prestigecarbns.com/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
